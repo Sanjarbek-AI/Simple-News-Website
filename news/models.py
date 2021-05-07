@@ -9,7 +9,7 @@ class NewsModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     image = models.ImageField()
 
-    category = models.ForeignKey(CategoryModel, on_delete=models.PROTECT, related_name='category', null=True)
+    category = models.ForeignKey(CategoryModel, on_delete=models.PROTECT, related_name='news', null=True)
 
     def __str__(self):
         return self.title
